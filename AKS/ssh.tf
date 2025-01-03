@@ -8,7 +8,7 @@ resource "azapi_resource" "ssh_public_key" {
   name      = random_pet.ssh_key_name.id
   location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
-
+}
   # Ensure that the random_pet resource is created before this
   depends_on = [random_pet.ssh_key_name]
 }
